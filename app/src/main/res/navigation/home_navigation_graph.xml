@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android = "http://schemas.android.com/apk/res/android"
+	xmlns:app = "http://schemas.android.com/apk/res-auto"
+	xmlns:tools = "http://schemas.android.com/tools"
+	android:id = "@+id/home_navigation_graph"
+	app:startDestination = "@id/homeFragment">
+
+	<fragment
+		android:id = "@+id/homeFragment"
+		android:name = "com.notepoint.dgsetdemo.home.HomeFragment"
+		android:label = "HomeFragment" >
+		<action
+			android:id = "@+id/action_homeFragment_to_productListFragment"
+			app:destination = "@id/productListFragment" />
+		<action
+			android:id = "@+id/action_homeFragment_to_serviceFragment"
+			app:destination = "@id/serviceFragment" />
+	</fragment>
+	<fragment
+		android:id = "@+id/productListFragment"
+		android:name = "com.notepoint.dgsetdemo.home.products.ProductListFragment"
+		android:label = "fragment_product_list"
+		tools:layout = "@layout/fragment_product_list" />
+	<fragment
+		android:id = "@+id/serviceFragment"
+		android:name = "com.notepoint.dgsetdemo.home.services.ServiceFragment"
+		android:label = "fragment_service"
+		tools:layout = "@layout/fragment_service" />
+</navigation>
