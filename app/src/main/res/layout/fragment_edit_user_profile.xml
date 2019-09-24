@@ -14,11 +14,11 @@
 		android:id = "@+id/user_profile_image_edit"
 		android:layout_width = "100dp"
 		android:layout_height = "100dp"
-		app:civ_border_width="2dp"
 		android:layout_marginStart = "@dimen/margin_large"
 		android:layout_marginTop = "@dimen/margin_large"
 		android:layout_marginEnd = "@dimen/margin_large"
 		android:src = "@drawable/user_outline_icon"
+		app:civ_border_width = "2dp"
 		app:layout_constraintEnd_toEndOf = "parent"
 		app:layout_constraintStart_toStartOf = "parent"
 		app:layout_constraintTop_toTopOf = "parent" />
@@ -45,8 +45,8 @@
 		android:layout_height = "40dp"
 		android:layout_marginTop = "@dimen/margin_large"
 		android:background = "@drawable/round_button"
-		android:hint="@string/user_first_name"
-		android:textColorHint="@color/colorBlack"
+		android:hint = "@string/user_first_name"
+		android:textColorHint = "@color/colorBlack"
 		app:layout_constraintEnd_toEndOf = "@+id/personal_text_view"
 		app:layout_constraintStart_toStartOf = "@+id/personal_text_view"
 		app:layout_constraintTop_toBottomOf = "@+id/personal_text_view" />
@@ -57,9 +57,9 @@
 		android:layout_width = "0dp"
 		android:layout_height = "40dp"
 		android:layout_marginTop = "@dimen/margin_large"
-		android:hint="@string/user_last_name"
-		android:textColorHint="@color/colorBlack"
 		android:background = "@drawable/round_button"
+		android:hint = "@string/user_last_name"
+		android:textColorHint = "@color/colorBlack"
 		app:layout_constraintEnd_toEndOf = "@+id/user_first_name_personal_edit"
 		app:layout_constraintStart_toStartOf = "@+id/user_first_name_personal_edit"
 		app:layout_constraintTop_toBottomOf = "@+id/user_first_name_personal_edit" />
@@ -70,9 +70,9 @@
 		android:layout_width = "0dp"
 		android:layout_height = "40dp"
 		android:layout_marginTop = "@dimen/margin_large"
-		android:hint="@string/user_email_personal"
-		android:textColorHint="@color/colorBlack"
 		android:background = "@drawable/round_button"
+		android:hint = "@string/user_email_personal"
+		android:textColorHint = "@color/colorBlack"
 		app:layout_constraintEnd_toEndOf = "@+id/user_last_name_personal_edit"
 		app:layout_constraintStart_toStartOf = "@+id/user_last_name_personal_edit"
 		app:layout_constraintTop_toBottomOf = "@+id/user_last_name_personal_edit" />
@@ -83,9 +83,9 @@
 		android:layout_width = "0dp"
 		android:layout_height = "wrap_content"
 		android:layout_marginTop = "@dimen/margin_large"
-		android:hint="@string/lorem_ipsum"
-		android:textColorHint="@color/colorBlack"
 		android:background = "@drawable/round_button"
+		android:hint = "@string/lorem_ipsum"
+		android:textColorHint = "@color/colorBlack"
 		app:layout_constraintEnd_toEndOf = "@+id/user_email_personal_tv_edit"
 		app:layout_constraintStart_toStartOf = "@+id/user_email_personal_tv_edit"
 		app:layout_constraintTop_toBottomOf = "@+id/user_email_personal_tv_edit" />
@@ -108,10 +108,10 @@
 		style = "@style/user_profile_text_style"
 		android:layout_width = "0dp"
 		android:layout_height = "40dp"
-		android:hint="@string/user_business_name"
-		android:textColorHint="@color/colorBlack"
 		android:layout_marginTop = "@dimen/margin_large"
 		android:background = "@drawable/round_button"
+		android:hint = "@string/user_business_name"
+		android:textColorHint = "@color/colorBlack"
 		app:layout_constraintEnd_toEndOf = "@+id/business_text_view"
 		app:layout_constraintStart_toStartOf = "@+id/business_text_view"
 		app:layout_constraintTop_toBottomOf = "@+id/business_text_view" />
@@ -122,9 +122,9 @@
 		android:layout_width = "0dp"
 		android:layout_height = "40dp"
 		android:layout_marginTop = "@dimen/margin_large"
-		android:hint="@string/user_business_contact"
-		android:textColorHint="@color/colorBlack"
 		android:background = "@drawable/round_button"
+		android:hint = "@string/user_business_contact"
+		android:textColorHint = "@color/colorBlack"
 		app:layout_constraintEnd_toEndOf = "@+id/user_business_name_tv_edit"
 		app:layout_constraintStart_toStartOf = "@+id/user_business_name_tv_edit"
 		app:layout_constraintTop_toBottomOf = "@+id/user_business_name_tv_edit" />
@@ -136,14 +136,89 @@
 		android:layout_height = "wrap_content"
 		android:layout_marginTop = "@dimen/margin_large"
 		android:layout_marginBottom = "8dp"
-		android:hint="@string/lorem_ipsum"
-		android:textColorHint="@color/colorBlack"
 		android:background = "@drawable/round_button"
+		android:hint = "@string/lorem_ipsum"
+		android:textColorHint = "@color/colorBlack"
 		app:layout_constraintBottom_toBottomOf = "parent"
 		app:layout_constraintEnd_toEndOf = "@+id/user_business_contact_tv_edit"
+		app:layout_constraintHorizontal_bias = "0.0"
 		app:layout_constraintStart_toStartOf = "@+id/user_business_contact_tv_edit"
-		app:layout_constraintTop_toBottomOf = "@+id/user_business_contact_tv_edit" />
+		app:layout_constraintTop_toBottomOf = "@+id/user_business_contact_tv_edit"
+		app:layout_constraintVertical_bias = "0.0" />
 		
+		<TextView
+			android:id = "@+id/change_password_text"
+			style = "@style/user_profile_text_style"
+			android:layout_width = "0dp"
+			android:layout_height = "40dp"
+			android:layout_marginTop = "@dimen/margin_large"
+			android:text = "Change Password:"
+			android:textAppearance = "@style/TextAppearance.AppCompat.Medium"
+			android:textStyle = "bold"
+			app:layout_constraintEnd_toEndOf = "@+id/user_business_address_tv_edit"
+			app:layout_constraintHorizontal_bias = "0.375"
+			app:layout_constraintStart_toStartOf = "@+id/user_business_address_tv_edit"
+			app:layout_constraintTop_toBottomOf = "@+id/user_business_address_tv_edit" />
+		
+		<EditText
+			android:id = "@+id/current_password_edit"
+			android:layout_width = "0dp"
+			android:layout_height = "40dp"
+			style = "@style/user_profile_text_style"
+			android:layout_marginTop = "16dp"
+			android:ems = "10"
+			android:inputType = "textPassword"
+			android:background = "@drawable/round_button"
+			android:hint = "Current password"
+			android:textColorHint = "@color/colorBlack"
+			app:layout_constraintEnd_toEndOf = "@+id/change_password_text"
+			app:layout_constraintStart_toStartOf = "@+id/change_password_text"
+			app:layout_constraintTop_toBottomOf = "@+id/change_password_text" />
+		
+		<EditText
+			android:id = "@+id/new_password_edit"
+			android:layout_width = "0dp"
+			android:layout_height = "40dp"
+			android:layout_marginTop = "16dp"
+			style = "@style/user_profile_text_style"
+			android:ems = "10"
+			android:inputType = "textPassword"
+			android:background = "@drawable/round_button"
+			android:hint = "New password"
+			android:textColorHint = "@color/colorBlack"
+			app:layout_constraintEnd_toEndOf = "@+id/current_password_edit"
+			app:layout_constraintStart_toStartOf = "@+id/current_password_edit"
+			app:layout_constraintTop_toBottomOf = "@+id/current_password_edit" />
+		
+		<EditText
+			android:id = "@+id/new_password_confirm_edit"
+			android:layout_width = "0dp"
+			android:layout_height = "40dp"
+			android:layout_marginTop = "16dp"
+			style = "@style/user_profile_text_style"
+			android:background = "@drawable/round_button"
+			android:hint = "Confirm password"
+			android:textColorHint = "@color/colorBlack"
+			android:ems = "10"
+			android:inputType = "textPassword"
+			app:layout_constraintEnd_toEndOf = "@+id/new_password_edit"
+			app:layout_constraintStart_toStartOf = "@+id/new_password_edit"
+			app:layout_constraintTop_toBottomOf = "@+id/new_password_edit" />
+		
+		<Button
+			android:layout_width = "wrap_content"
+			android:layout_height = "40dp"
+			android:layout_marginStart = "8dp"
+			android:text = "Update password"
+			android:padding="5dp"
+			android:layout_marginTop = "16dp"
+			android:background="@drawable/round_button"
+			android:textColor="@color/colorAccent"
+			android:layout_marginBottom = "16dp"
+			app:layout_constraintBottom_toBottomOf = "parent"
+			app:layout_constraintEnd_toEndOf = "@+id/new_password_confirm_edit"
+			app:layout_constraintStart_toStartOf = "@+id/new_password_confirm_edit"
+			app:layout_constraintTop_toBottomOf = "@+id/new_password_confirm_edit" />
 	
 	</androidx.constraintlayout.widget.ConstraintLayout >
 

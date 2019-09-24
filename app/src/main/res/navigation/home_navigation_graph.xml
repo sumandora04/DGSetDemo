@@ -16,7 +16,9 @@
 		android:id = "@+id/action_productListFragment_to_serviceFragment"
 		app:destination = "@id/serviceFragment" /><action
 		android:id = "@+id/action_productListFragment_to_historyFragment"
-		app:destination = "@id/historyFragment" /></fragment >
+		app:destination = "@id/historyFragment" /><action
+		android:id = "@+id/action_productListFragment_to_productDetailFragment"
+		app:destination = "@id/productDetailFragment" /></fragment >
 	<fragment
 		android:id = "@+id/serviceFragment"
 		android:name = "com.notepoint.dgsetdemo.home.services.ServiceFragment"
@@ -33,6 +35,23 @@
 	android:name = "com.notepoint.dgsetdemo.home.editProfile.EditUserProfileFragment"
 	tools:layout = "@layout/fragment_edit_user_profile" /><fragment
 	android:id = "@+id/historyFragment"
-	android:name = "com.notepoint.dgsetdemo.home.history.HistoryFragment"
-	tools:layout = "@layout/fragment_history" />
+	android:name = "com.notepoint.dgsetdemo.home.history.historyOverview.HistoryFragment"
+	tools:layout = "@layout/fragment_history" ><action
+	android:id = "@+id/action_historyFragment_to_historyDetailFragment"
+	app:destination = "@id/historyDetailFragment" /></fragment ><fragment
+	android:id = "@+id/aboutFragment"
+	android:name = "com.notepoint.dgsetdemo.home.about.AboutFragment"
+	tools:layout = "@layout/fragment_about" /><fragment
+	android:id = "@+id/historyDetailFragment"
+	android:name = "com.notepoint.dgsetdemo.home.history.historyDetail.HistoryDetailFragment"
+	tools:layout = "@layout/fragment_history_detail" /><fragment
+	android:id = "@+id/settingFragment"
+	android:name = "com.notepoint.dgsetdemo.home.setting.SettingFragment"
+	tools:layout = "@layout/fragment_setting" /><fragment
+	android:id = "@+id/helpFragment"
+	android:name = "com.notepoint.dgsetdemo.home.help.HelpFragment"
+	tools:layout = "@layout/fragment_help" /><fragment
+	android:id = "@+id/productDetailFragment"
+	android:name = "com.notepoint.dgsetdemo.home.products.ProductDetailFragment"
+	tools:layout = "@layout/fragment_product_detail" />
 </navigation>

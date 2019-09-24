@@ -1,4 +1,4 @@
-package com.notepoint.dgsetdemo.home.history;
+package com.notepoint.dgsetdemo.home.history.historyOverview;
 
 import android.view.LayoutInflater;
 import android.view.View;

@@ -1,5 +1,7 @@
 package com.notepoint.dgsetdemo.home;
 
+import android.os.Bundle;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,8 +11,6 @@ import androidx.navigation.NavDestination;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
-
-import android.os.Bundle;
 
 import com.google.android.material.navigation.NavigationView;
 import com.notepoint.dgsetdemo.R;
@@ -30,12 +30,12 @@ public class HomePageActivity extends AppCompatActivity {
 
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
 
-        NavigationUI.setupActionBarWithNavController(this,navController,drawerLayout);
+        NavigationUI.setupActionBarWithNavController(this, navController, drawerLayout);
 
         appBarConfiguration =
                 new AppBarConfiguration.Builder(navController.getGraph()).build();
 
-        NavigationUI.setupWithNavController(navigationView,navController);
+        NavigationUI.setupWithNavController(navigationView, navController);
 
         navController.addOnDestinationChangedListener(new NavController.OnDestinationChangedListener() {
             @Override
@@ -63,6 +63,26 @@ public class HomePageActivity extends AppCompatActivity {
 
                     case R.id.historyFragment:
                         setTitle("History");
+                        break;
+
+                    case R.id.settingFragment:
+                        setTitle("Setting");
+                        break;
+
+                    case R.id.aboutFragment:
+                        setTitle("About us");
+                        break;
+
+                    case R.id.historyDetailFragment:
+                        setTitle("History");
+                        break;
+
+                    case R.id.helpFragment:
+                        setTitle("Help");
+                        break;
+
+                    case R.id.productDetailFragment:
+                        setTitle("DG Set");
                         break;
 
                     default:
