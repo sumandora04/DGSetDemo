@@ -35,7 +35,7 @@
 				app:layout_constraintHorizontal_bias = "0.498"
 				app:layout_constraintStart_toStartOf = "parent"
 				app:layout_constraintTop_toTopOf = "parent"
-				app:srcCompat = "@drawable/dg_set" />
+				app:srcCompat = "@drawable/generator_icon" />
 
 			<TextView
 				android:id = "@+id/textView3"
@@ -43,7 +43,9 @@
 				android:layout_height = "wrap_content"
 				android:layout_gravity = "center"
 				android:layout_marginTop = "8dp"
-				android:text = "Company name here"
+				android:text = "DG Set Product and Services"
+				android:textStyle="bold"
+				android:textAppearance="@style/TextAppearance.AppCompat.Medium"
 				android:textColor = "@color/lightAccent"
 				app:layout_constraintEnd_toEndOf = "@+id/imageView3"
 				app:layout_constraintStart_toStartOf = "@+id/imageView3"

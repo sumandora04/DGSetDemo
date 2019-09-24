@@ -6,6 +6,7 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
+import androidx.navigation.fragment.NavHostFragment;
 
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -36,28 +37,28 @@ public class HomeFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_home, container, false);
 
-        view.findViewById(R.id.service_card_view).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Navigation.findNavController(Objects.requireNonNull(getActivity()),R.id.nav_host_fragment)
-                        .navigate(R.id.action_homeFragment_to_serviceFragment);
-            }
-        });
-
-        view.findViewById(R.id.product_card_view).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Navigation.findNavController(Objects.requireNonNull(getActivity()),R.id.nav_host_fragment)
-                        .navigate(R.id.action_homeFragment_to_productListFragment);
-            }
-        });
+//        view.findViewById(R.id.service_card_view).setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Navigation.findNavController(Objects.requireNonNull(getActivity()),R.id.nav_host_fragment)
+//                        .navigate(R.id.action_homeFragment_to_serviceFragment);
+//            }
+//        });
+//
+//        view.findViewById(R.id.product_card_view).setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Navigation.findNavController(Objects.requireNonNull(getActivity()),R.id.nav_host_fragment)
+//                        .navigate(R.id.action_homeFragment_to_productListFragment);
+//            }
+//        });
 
 
         setHasOptionsMenu(true);
         return view;
     }
 
-    @Override
+   /* @Override
     public void onCreateOptionsMenu(@NonNull Menu menu, @NonNull MenuInflater inflater) {
         super.onCreateOptionsMenu(menu, inflater);
         inflater.inflate(R.menu.home_menu,menu);
@@ -71,12 +72,12 @@ public class HomeFragment extends Fragment {
                 break;
 
             case R.id.profile_menu:
-                Toast.makeText(getContext(), "User Profile", Toast.LENGTH_SHORT).show();
+                NavHostFragment.findNavController(this).navigate(R.id.action_homeFragment_to_userProfileFragment);
                 break;
             case R.id.notification_menu:
-                Toast.makeText(getContext(), "Notification", Toast.LENGTH_SHORT).show();
+                NavHostFragment.findNavController(this).navigate(R.id.action_homeFragment_to_notificationFragment);
                 break;
         }
         return super.onOptionsItemSelected(item);
-    }
+    }*/
 }

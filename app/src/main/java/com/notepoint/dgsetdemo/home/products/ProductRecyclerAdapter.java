@@ -33,7 +33,7 @@ public class ProductRecyclerAdapter extends RecyclerView.Adapter<ProductRecycler
 
         ProductModel product = productList.get(position);
         holder.productName.setText(product.getProductName());
-        holder.productPrice.setText(String.valueOf(product.getProductPrice()));
+        holder.productPrice.setText(String.format("Rs.%s", product.getProductPrice()));
         holder.productImage.setImageResource(product.getProductImageId());
 
     }

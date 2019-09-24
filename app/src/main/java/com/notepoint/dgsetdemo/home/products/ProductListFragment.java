@@ -3,12 +3,18 @@ package com.notepoint.dgsetdemo.home.products;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.fragment.NavHostFragment;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.notepoint.dgsetdemo.R;
 
@@ -45,7 +51,33 @@ public class ProductListFragment extends Fragment {
         RecyclerView recyclerView = view.findViewById(R.id.recycler_product);
         ProductRecyclerAdapter adapter = new ProductRecyclerAdapter(productList);
         recyclerView.setAdapter(adapter);
+
+        setHasOptionsMenu(true);
+
         return view;
+    }
+
+    @Override
+    public void onCreateOptionsMenu(@NonNull Menu menu, @NonNull MenuInflater inflater) {
+        super.onCreateOptionsMenu(menu, inflater);
+        inflater.inflate(R.menu.home_menu,menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.history_menu:
+                NavHostFragment.findNavController(this).navigate(R.id.action_productListFragment_to_historyFragment);
+                break;
+
+            case R.id.profile_menu:
+                NavHostFragment.findNavController(this).navigate(R.id.action_productListFragment_to_userProfileFragment);
+                break;
+            case R.id.notification_menu:
+                NavHostFragment.findNavController(this).navigate(R.id.action_productListFragment_to_notificationFragment);
+                break;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
 }

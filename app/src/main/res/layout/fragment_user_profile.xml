@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android = "http://schemas.android.com/apk/res/android"
+	xmlns:app = "http://schemas.android.com/apk/res-auto"
+	xmlns:tools = "http://schemas.android.com/tools"
+	android:id = "@+id/scrollView3"
+	android:layout_width = "match_parent"
+	android:layout_height = "match_parent"
+	tools:context = ".home.profile.UserProfileFragment" >
+	
+	<androidx.constraintlayout.widget.ConstraintLayout
+		android:layout_width = "match_parent"
+		android:layout_height = "wrap_content" >
+	
+	<de.hdodenhof.circleimageview.CircleImageView
+		android:id = "@+id/user_profile_image"
+		android:layout_width = "100dp"
+		android:layout_height = "100dp"
+		android:layout_marginStart = "@dimen/margin_large"
+		android:layout_marginTop = "@dimen/margin_large"
+		android:layout_marginEnd = "@dimen/margin_large"
+		android:src = "@drawable/user_outline_icon"
+		app:civ_border_width = "2dp"
+		app:layout_constraintEnd_toEndOf = "parent"
+		app:layout_constraintStart_toStartOf = "parent"
+		app:layout_constraintTop_toTopOf = "parent" />
+		
+		<TextView
+			android:id = "@+id/personal_text_view"
+			style = "@style/user_profile_text_style"
+			android:layout_width = "0dp"
+			android:layout_height = "40dp"
+			android:layout_marginStart = "8dp"
+			android:layout_marginTop = "@dimen/margin_large"
+			android:layout_marginEnd = "8dp"
+			android:text = "Personal Details:"
+			android:textAppearance = "@style/TextAppearance.AppCompat.Medium"
+			android:textStyle = "bold"
+			app:layout_constraintEnd_toEndOf = "parent"
+			app:layout_constraintStart_toStartOf = "parent"
+			app:layout_constraintTop_toBottomOf = "@+id/user_profile_image" />
+	
+	<TextView
+		android:id = "@+id/user_first_name_personal"
+		style = "@style/user_profile_text_style"
+		android:layout_width = "0dp"
+		android:layout_height = "40dp"
+		android:layout_marginTop = "@dimen/margin_large"
+		android:background = "@drawable/round_button"
+		android:text = "@string/user_first_name"
+		app:layout_constraintEnd_toEndOf = "@+id/personal_text_view"
+		app:layout_constraintStart_toStartOf = "@+id/personal_text_view"
+		app:layout_constraintTop_toBottomOf = "@+id/personal_text_view" />
+	
+	<TextView
+		android:id = "@+id/user_last_name_personal"
+		style = "@style/user_profile_text_style"
+		android:layout_width = "0dp"
+		android:layout_height = "40dp"
+		android:layout_marginTop = "@dimen/margin_large"
+		android:background = "@drawable/round_button"
+		android:text = "@string/user_last_name"
+		app:layout_constraintEnd_toEndOf = "@+id/user_first_name_personal"
+		app:layout_constraintStart_toStartOf = "@+id/user_first_name_personal"
+		app:layout_constraintTop_toBottomOf = "@+id/user_first_name_personal" />
+	
+	<TextView
+		android:id = "@+id/user_email_personal_tv"
+		style = "@style/user_profile_text_style"
+		android:layout_width = "0dp"
+		android:layout_height = "40dp"
+		android:layout_marginTop = "@dimen/margin_large"
+		android:background = "@drawable/round_button"
+		android:text = "@string/user_email_personal"
+		app:layout_constraintEnd_toEndOf = "@+id/user_last_name_personal"
+		app:layout_constraintStart_toStartOf = "@+id/user_last_name_personal"
+		app:layout_constraintTop_toBottomOf = "@+id/user_last_name_personal" />
+	
+	<TextView
+		android:id = "@+id/user_address_personal_tv"
+		style = "@style/user_profile_text_style"
+		android:layout_width = "0dp"
+		android:layout_height = "wrap_content"
+		android:layout_marginTop = "@dimen/margin_large"
+		android:background = "@drawable/round_button"
+		android:text = "@string/lorem_ipsum"
+		app:layout_constraintEnd_toEndOf = "@+id/user_email_personal_tv"
+		app:layout_constraintStart_toStartOf = "@+id/user_email_personal_tv"
+		app:layout_constraintTop_toBottomOf = "@+id/user_email_personal_tv" />
+		
+		<TextView
+			android:id = "@+id/business_text_view"
+			style = "@style/user_profile_text_style"
+			android:layout_width = "0dp"
+			android:layout_height = "40dp"
+			android:layout_marginTop = "@dimen/margin_large"
+			android:text = "Business Details:"
+			android:textAppearance = "@style/TextAppearance.AppCompat.Medium"
+			android:textStyle = "bold"
+			app:layout_constraintEnd_toEndOf = "@+id/user_address_personal_tv"
+			app:layout_constraintStart_toStartOf = "@+id/user_address_personal_tv"
+			app:layout_constraintTop_toBottomOf = "@+id/user_address_personal_tv" />
+	
+	<TextView
+		android:id = "@+id/user_business_name_tv"
+		style = "@style/user_profile_text_style"
+		android:layout_width = "0dp"
+		android:layout_height = "40dp"
+		android:layout_marginTop = "@dimen/margin_large"
+		android:background = "@drawable/round_button"
+		android:text="@string/user_business_name"
+		app:layout_constraintEnd_toEndOf = "@+id/business_text_view"
+		app:layout_constraintStart_toStartOf = "@+id/business_text_view"
+		app:layout_constraintTop_toBottomOf = "@+id/business_text_view" />
+	
+	<TextView
+		android:id = "@+id/user_business_contact_tv"
+		style = "@style/user_profile_text_style"
+		android:layout_width = "0dp"
+		android:layout_height = "40dp"
+		android:layout_marginTop = "@dimen/margin_large"
+		android:text="@string/user_business_contact"
+		android:background = "@drawable/round_button"
+		app:layout_constraintEnd_toEndOf = "@+id/user_business_name_tv"
+		app:layout_constraintStart_toStartOf = "@+id/user_business_name_tv"
+		app:layout_constraintTop_toBottomOf = "@+id/user_business_name_tv" />
+	
+	<TextView
+		android:id = "@+id/user_business_address_tv"
+		style = "@style/user_profile_text_style"
+		android:layout_width = "0dp"
+		android:layout_height = "wrap_content"
+		android:layout_marginTop = "@dimen/margin_large"
+		android:layout_marginBottom = "@dimen/margin_large"
+		android:background = "@drawable/round_button"
+		android:text = "@string/lorem_ipsum"
+		app:layout_constraintBottom_toBottomOf = "parent"
+		app:layout_constraintEnd_toEndOf = "@+id/user_business_contact_tv"
+		app:layout_constraintStart_toStartOf = "@+id/user_business_contact_tv"
+		app:layout_constraintTop_toBottomOf = "@+id/user_business_contact_tv" />
+		
+	
+	</androidx.constraintlayout.widget.ConstraintLayout >
+
+</ScrollView >
