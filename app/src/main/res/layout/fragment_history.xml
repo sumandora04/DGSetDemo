@@ -18,6 +18,6 @@
 	    app:layout_constraintTop_toTopOf = "parent"
 	    app:spanCount = "2"
 	    tools:itemCount = "16"
-	    tools:listitem = "@layout/notification_list_single_cell" />
+	    tools:listitem = "@layout/single_history_cell" />
 
 </androidx.constraintlayout.widget.ConstraintLayout >

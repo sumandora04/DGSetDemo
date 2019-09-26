@@ -9,7 +9,8 @@ public class HistoryModel {
     private String vendorDetail;
     private int imageUrl;
 
-    public HistoryModel(String productServiceName, String status, String orderRequestDate, String deliveryDate, String vendorDetail, int imageUrl) {
+    public HistoryModel(String productServiceName, String status, String orderRequestDate,
+                        String deliveryDate, String vendorDetail, int imageUrl) {
         this.productServiceName = productServiceName;
         this.status = status;
         this.orderRequestDate = orderRequestDate;

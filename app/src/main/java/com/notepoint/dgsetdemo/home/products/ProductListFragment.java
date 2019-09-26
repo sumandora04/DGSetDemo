@@ -2,28 +2,29 @@ package com.notepoint.dgsetdemo.home.products;
 
 
 import android.os.Bundle;
-
-import androidx.annotation.NonNull;
-import androidx.fragment.app.Fragment;
-import androidx.navigation.fragment.NavHostFragment;
-import androidx.recyclerview.widget.RecyclerView;
-
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
+import androidx.navigation.fragment.NavHostFragment;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.notepoint.dgsetdemo.R;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class ProductListFragment extends Fragment {
+public class ProductListFragment extends Fragment implements ProductRecyclerAdapter.OnProductSelectionListener {
 
     ArrayList<ProductModel> productList;
 
@@ -49,7 +50,7 @@ public class ProductListFragment extends Fragment {
 
 
         RecyclerView recyclerView = view.findViewById(R.id.recycler_product);
-        ProductRecyclerAdapter adapter = new ProductRecyclerAdapter(productList);
+        ProductRecyclerAdapter adapter = new ProductRecyclerAdapter(productList, this);
         recyclerView.setAdapter(adapter);
 
         setHasOptionsMenu(true);
@@ -60,12 +61,12 @@ public class ProductListFragment extends Fragment {
     @Override
     public void onCreateOptionsMenu(@NonNull Menu menu, @NonNull MenuInflater inflater) {
         super.onCreateOptionsMenu(menu, inflater);
-        inflater.inflate(R.menu.home_menu,menu);
+        inflater.inflate(R.menu.home_menu, menu);
     }
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()){
+        switch (item.getItemId()) {
             case R.id.history_menu:
                 NavHostFragment.findNavController(this).navigate(R.id.action_productListFragment_to_historyFragment);
                 break;
@@ -80,4 +81,9 @@ public class ProductListFragment extends Fragment {
         return super.onOptionsItemSelected(item);
     }
 
+    @Override
+    public void onProductSelection(int position) {
+        Log.d("onProductSelection: ","Clicked");
+        NavHostFragment.findNavController(this).navigate(R.id.action_productListFragment_to_productDetailFragment);
+    }
 }

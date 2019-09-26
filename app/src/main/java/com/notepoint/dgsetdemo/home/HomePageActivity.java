@@ -1,5 +1,6 @@
 package com.notepoint.dgsetdemo.home;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -14,6 +15,7 @@ import androidx.navigation.ui.NavigationUI;
 
 import com.google.android.material.navigation.NavigationView;
 import com.notepoint.dgsetdemo.R;
+import com.notepoint.dgsetdemo.logIn.LoginActivity;
 
 public class HomePageActivity extends AppCompatActivity {
 
@@ -65,9 +67,6 @@ public class HomePageActivity extends AppCompatActivity {
                         setTitle("History");
                         break;
 
-                    case R.id.settingFragment:
-                        setTitle("Setting");
-                        break;
 
                     case R.id.aboutFragment:
                         setTitle("About us");
@@ -83,6 +82,11 @@ public class HomePageActivity extends AppCompatActivity {
 
                     case R.id.productDetailFragment:
                         setTitle("DG Set");
+                        break;
+
+                    case R.id.log_out:
+                        startActivity(new Intent(HomePageActivity.this, LoginActivity.class));
+                        finish();
                         break;
 
                     default:

@@ -19,11 +19,7 @@
 	    android:id = "@+id/historyFragment"
 	    android:icon = "@drawable/history_time_icon"
 	    android:title = "My Product and Service" />
-    
-    <item
-	    android:id = "@+id/settingFragment"
-	    android:icon = "@drawable/setting_icon"
-	    android:title = "Setting" />
+	
 	
 	<item
 		android:id = "@+id/helpFragment"
@@ -31,6 +27,7 @@
 		android:title = "Help" />
 	
     <item
+	    android:id="@+id/log_out"
 	    android:icon = "@drawable/logout_icon"
 	    android:title = "Log out" />
 </menu >
